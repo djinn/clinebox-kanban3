@@ -1,0 +1,17 @@
+{
+  "name": "clinebox-kanban3",
+  "version": "0.1.0",
+  "private": true,
+  "description": "One-click Cline Kanban deployment on Cloudflare Containers",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "echo 'Kanban container image is built and deployed via wrangler.jsonc containers config'",
+    "deploy": "npx wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241112.0",
+    "typescript": "^5.6.0",
+    "wrangler": "^3.90.0"
+  }
+}

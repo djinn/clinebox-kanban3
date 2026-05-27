@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cline Kanban on Cloudflare</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0a0a0a;color:#e5e5e5;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.container{max-width:640px;padding:2rem;text-align:center}
+h1{font-size:2.5rem;font-weight:700;margin-bottom:0.5rem;background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{font-size:1.1rem;color:#9ca3af;margin-bottom:2rem}
+.status{display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;background:#1f2937;border-radius:999px;font-size:0.875rem;margin-bottom:2rem}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;border-radius:8px;font-size:1rem;font-weight:500;background:#3b82f6;color:white;text-decoration:none;transition:background 0.2s}
+.btn:hover{background:#2563eb}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem;text-align:left}
+.feature{padding:1rem;background:#1f2937;border-radius:8px}
+.feature h3{font-size:0.9rem;margin-bottom:0.25rem;color:#60a5fa}
+.feature p{font-size:0.8rem;color:#9ca3af}
+footer{margin-top:3rem;font-size:0.8rem;color:#6b7280}
+a{color:#60a5fa;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Cline Kanban</h1>
+<p class="subtitle">Run coding agents in parallel — deployed on Cloudflare</p>
+<div class="status"><span class="dot"></span><span>Your workspace is provisioning</span></div>
+<p style="margin-bottom:2rem;color:#9ca3af">Once your Kanban workspace is ready, you'll be redirected automatically.<br/>This usually takes 2-5 minutes.</p>
+<a href="/" class="btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> Open Kanban</a>
+<div class="features">
+<div class="feature"><h3>Agent Orchestration</h3><p>Run multiple coding agents in parallel on isolated worktrees</p></div>
+<div class="feature"><h3>Visual Board</h3><p>Drag-and-drop task management with real-time status updates</p></div>
+<div class="feature"><h3>Diff Review</h3><p>Review agent changes with inline commenting and checkpoint diffs</p></div>
+<div class="feature"><h3>Auto-commit</h3><p>Chain tasks for fully autonomous dependency-driven workflows</p></div>
+</div>
+<footer>Powered by <a href="https://github.com/cline/kanban">Cline Kanban</a> &bull; Deployed on <a href="https://cloudflare.com">Cloudflare</a></footer>
+</div>
+</body>
+</html>

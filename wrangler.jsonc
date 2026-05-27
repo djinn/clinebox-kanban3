@@ -1,0 +1,45 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "clinebox-kanban3",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-05-26",
+  "compatibility_flags": ["nodejs_compat"],
+
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./public",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": true
+  },
+
+  "vars": {
+    "APP_NAME": "Cline Kanban",
+    "KANBAN_CONTAINER_HOST": "localhost",
+    "KANBAN_CONTAINER_PORT": "3484",
+    "ENVIRONMENT": "production"
+  },
+
+  "containers": {
+    "binding": "KANBAN_SERVICE",
+    "image": "ghcr.io/cline/kanban:latest",
+    "port": 3484,
+    "vcpu": 2,
+    "memory": "4 GB",
+    "disk": "20 GB"
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "clinebox-kanban-db",
+      "database_id": "d6cee9db-1244-4783-a5ab-ad723e12629a"
+    }
+  ],
+
+  "kv_namespaces": [
+    {
+      "binding": "KANBAN_KV",
+      "id": "6d8d26d66eac4672ad76ac2fb48aea78"
+    }
+  ]
+}
